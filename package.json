@@ -19,7 +19,7 @@
     "homepage": "https://github.com/applitools/tutorial-images-javascript#readme",
     "dependencies": {
         "@applitools/eyes-images": "latest",
-        "mocha": "^8.2.1",
+        "mocha": "^8.3.2",
         "node-fetch": "^2.6.1"
     }
 }
