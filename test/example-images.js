@@ -1,11 +1,11 @@
 'use strict'
 
-const {Eyes, Target, Configuration, BatchInfo} = require('@applitools/eyes-images')
+const { Eyes, Target, Configuration, BatchInfo } = require('@applitools/eyes-images')
 const fetch = require('node-fetch')
 const path = require('path')
 
 describe('Eyes-Images', () => {
-    let eyes 
+    let eyes
 
     beforeEach(() => {
         eyes = new Eyes()
@@ -24,10 +24,10 @@ describe('Eyes-Images', () => {
     })
 
     it('Images test', async () => {
-        await eyes.open('Applitools site', 'Screenshot test!', {width: 800, height: 600})
+        await eyes.open('Applitools site', 'Screenshot test!', { width: 800, height: 600 })
 
         await eyes.check('URL', Target.image('https://i.ibb.co/bJgzfb3/applitools.png'))
-        
+
         const imageBuffer = await fetch('https://i.ibb.co/bJgzfb3/applitools.png').then(resp => resp.buffer())
         await eyes.check('Buffer', Target.image(imageBuffer))
 
@@ -37,7 +37,7 @@ describe('Eyes-Images', () => {
 
         await eyes.close()
     })
-    
+
     afterEach(async () => {
         await eyes.abortIfNotClosed();
     })

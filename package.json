@@ -18,8 +18,8 @@
     },
     "homepage": "https://github.com/applitools/tutorial-images-javascript#readme",
     "dependencies": {
-        "@applitools/eyes-images": "^4.21.0",
-        "mocha": "^9.1.3",
-        "node-fetch": "^2.6.6"
+        "@applitools/eyes-images": "^4.30.3",
+        "mocha": "^11.4.0",
+        "node-fetch": "^2.7.0"
     }
 }
